@@ -73,33 +73,51 @@ Test Scenarios
 
 **Expected Result**: Error message is displayed.
 
+## 2. Item Sorting Tests
 
-## 2. Product Search Tests
+### 2.1  Sort Items by Price (Low to High)
 
-### 2.1 Search for a Product
-
-**Description**: Verify that searching for a product returns the correct results.
-
-**Steps**:
-
-1. Log in with valid credentials.
-2. Use the search functionality to search for a specific product (e.g., Sauce Labs Backpack).
-3. Verify the product is displayed in the search results.
-
-**Expected Result**: Items appear in ascending order of price.
-
-## 3. Item Filtering Tests
-
-### 3.1  Filter Items by Price (Low to High)
-
-**Description**: Verify that the filter functionality arranges items correctly by price (Low to High).
+**Description**: Verify that the Sort functionality arranges items correctly by price (Low to High).
 
 **Steps**:
 1. Log in with valid credentials.
-2. Use the filter dropdown to select "Price (low to high)".
+2. Use the sort dropdown to select "Price (low to high)".
 3. Verify the items are sorted by price in ascending order.
 
 **Expected Result**: Items appear in ascending order of price.
+
+### 2.2  Sort Items by Price (High to Low)
+
+**Description**: Verify that the Sort functionality arranges items correctly by price (High to Low).
+
+**Steps**:
+1. Log in with valid credentials.
+2. Use the sort dropdown to select "Price (high to low)".
+3. Verify the items are sorted by price in descending order.
+
+**Expected Result**: Items appear in descending order of price.
+
+### 2.3  Sort Items by Name (A to Z)
+
+**Description**: Verify that the Sort functionality arranges items correctly by Name (A to Z).
+
+**Steps**:
+1. Log in with valid credentials.
+2. Use the sort dropdown to select "Name (A to Z)".
+3. Verify the items are sorted by name in ascending order.
+
+**Expected Result**: Items appear in ascending order of name.
+
+### 2.4  Sort Items by Name (Z to A)
+
+**Description**: Verify that the Sort functionality arranges items correctly by Name (Z to A).
+
+**Steps**:
+1. Log in with valid credentials.
+2. Use the sort dropdown to select "Name (Z to A)".
+3. Verify the items are sorted by name in descending order.
+
+**Expected Result**: Items appear in descending order of name.
 
 ## 4. Reset App State
 
