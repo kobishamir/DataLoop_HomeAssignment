@@ -25,7 +25,6 @@ class TestInvalidLogin:
         driver.find_element(By.ID, "password").send_keys(password)
         driver.find_element(By.ID, "login-button").click()
 
-        # Assert error message
         error_message = driver.find_element(By.CSS_SELECTOR, ".error-message-container").text
         expected_message = "Epic sadface: Username and password do not match any user in this service"
         assert error_message == expected_message, f"Unexpected error message: {error_message}"

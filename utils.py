@@ -17,3 +17,15 @@ def login(driver, username, password):
     driver.find_element(By.ID, "user-name").send_keys(username)
     driver.find_element(By.ID, "password").send_keys(password)
     driver.find_element(By.ID, "login-button").click()
+
+def add_items_to_cart(driver, num_items=1):
+    """Adds a specified number of items to the cart."""
+    add_buttons = driver.find_elements(By.CLASS_NAME, "btn_inventory")
+    for button in add_buttons[:num_items]:
+        button.click()
+
+def reset_app_state(driver):
+    """Resets the app state via the sidebar menu."""
+    driver.find_element(By.ID, "react-burger-menu-btn").click()  # Open the sidebar menu
+    driver.find_element(By.ID, "reset_sidebar_link").click()  # Click reset app state
+    driver.find_element(By.ID, "react-burger-cross-btn").click()  # Close the sidebar menu

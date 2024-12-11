@@ -21,7 +21,6 @@ class TestLoginUsers:
 
         login(driver, username, password)
 
-        # Assert successful login
         assert "inventory.html" in driver.current_url, "Standard user login failed."
 
     def test_login_locked_out_user(self, setup_driver):
@@ -31,7 +30,6 @@ class TestLoginUsers:
 
         login(driver, username, password)
 
-        # Assert error message
         error_message = driver.find_element(By.CLASS_NAME, "error-message-container").text
         assert "Sorry, this user has been locked out." in error_message, "Locked-out user error message is incorrect."
 
@@ -42,7 +40,6 @@ class TestLoginUsers:
 
         login(driver, username, password)
 
-        # Assert successful login
         assert "inventory.html" in driver.current_url, "Problem user login failed."
 
     def test_login_performance_glitch_user(self, setup_driver):
@@ -52,5 +49,4 @@ class TestLoginUsers:
 
         login(driver, username, password)
 
-        # Assert successful login
         assert "inventory.html" in driver.current_url, "Performance glitch user login failed."
